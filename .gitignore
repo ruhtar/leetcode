@@ -6,6 +6,9 @@ obj/
 *.user
 *.vspscc
 *.vssscc
+*.bin
+*.v2
+*.vsidx
 
 # Pasta de dependências NuGet
 packages/
