@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            var list = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
-            var result = BinarySearch.Find(list, 1);
+            var list = new int[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+            var result = BinarySearch.Find(list, 7);
 
             if (result == -1)
             {
@@ -21,10 +21,10 @@
 
     public class BinarySearch
     {
-        public static int Find(List<int> list, int target)
+        public static int Find(int[] list, int target)
         {
-            var lastIndex = list.Count - 1;
-            int middleIndex = list.Count / 2;
+            var lastIndex = list.Length - 1;
+            int middleIndex = list.Length / 2;
 
             while (true)
             {

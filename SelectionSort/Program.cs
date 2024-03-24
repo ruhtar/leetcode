@@ -4,21 +4,24 @@
     {
         static void Main(string[] args)
         {
-            var list = new List<int>() { 6, 12, 62, 13, 789, 234, 1212, 2, 40, 10, 1000, 200, 333, -4, 0 };
+            var list = new int[] { 6, 12, 62, 13, 789, 234, 1212, 2, 40, 10, 1000, 200, 333, -4, 0 };
             var sortedList = SelectionSort.Sort(list);
-            sortedList.ForEach(Console.WriteLine);
+            foreach (var item in sortedList)
+            {
+                Console.WriteLine(item);
+            };
             Console.ReadLine();
         }
     }
 
     public class SelectionSort
     {
-        public static List<int> Sort(List<int> list)
+        public static int[] Sort(int[] list)
         {
-            for (int i = 0; i < list.Count - 1; i++)
+            for (int i = 0; i < list.Length - 1; i++)
             {
                 var smallest = list[i];
-                for (var j = i + 1; j < list.Count; j++)
+                for (var j = i + 1; j < list.Length; j++)
                 {
                     if (list[j] < smallest)
                     {
