@@ -1,0 +1,81 @@
+# Arquivos de compilação do Visual Studio
+bin/
+obj/
+
+# Arquivos temporários gerados durante a compilação
+*.user
+*.vspscc
+*.vssscc
+
+# Pasta de dependências NuGet
+packages/
+
+# Arquivos de compilação gerados automaticamente
+*.exe
+*.pdb
+*.dll
+*.log
+*.vsix
+*.nupkg
+*.zip
+*.rar
+*.7z
+*.gz
+*.tar
+*.bak
+
+# Arquivos de log e cache
+*.log
+*.cache
+
+# Arquivos de cache do ReSharper
+*_ReSharper*
+
+# Arquivos de análise
+*.suo
+*.user
+*.sln.docstates
+*.suo
+*.user
+*.iws
+*.ncb
+*.sdf
+*.pdb
+*.opendb
+*.log
+*.pch
+*.idb
+*.hxc
+*.aps
+*.res
+*.aps
+*.ncb
+*.ilk
+*.log
+*.iobj
+*.obj
+*.pch
+*.idb
+*.dep
+*.tlog
+*.lastbuildstate
+
+# Arquivos gerados pelo compilador TypeScript
+*.js
+*.js.map
+
+# Pasta de módulos Node.js
+node_modules/
+
+# Arquivos gerados pelo editor de código
+.vscode/
+*.swp
+*.swo
+*.swn
+*.swo
+*.swp
+
+# Arquivos de log e cache
+*.log
+*.cache
+
