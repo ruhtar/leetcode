@@ -5,10 +5,12 @@
         public static void Main(string[] args)
         {
             var linkedList = new LinkedList<int>();
-            linkedList.AddToTheEnd(5);
-            linkedList.AddToTheEnd(1);
-            linkedList.AddToTheEnd(1);
-            linkedList.AddToTheEnd(9);
+            linkedList.AddNodeInTheEnd(5);
+            linkedList.AddNodeInTheEnd(1);
+            linkedList.AddNodeInTheEnd(1);
+            linkedList.AddNodeInTheEnd(9);
+
+            linkedList.AddNodeInTheBeginning(0);
 
             linkedList.Print();
             Console.ReadLine();
@@ -35,7 +37,7 @@
                 }
             }
 
-            public void AddToTheEnd(T value)
+            public void AddNodeInTheEnd(T value)
             {
                 var currentNode = Node;
                 if (currentNode == null)
@@ -54,6 +56,12 @@
                     }
                     currentNode = currentNode.Next;
                 }
+            }
+
+            public void AddNodeInTheBeginning(T value)
+            {
+                var newNode = new Node<T>(value, Node);
+                Node = newNode;
             }
         }
 
