@@ -9,6 +9,7 @@ obj/
 *.bin
 *.v2
 *.vsidx
+VSWorkspaceState.json
 
 # Pasta de dependências NuGet
 packages/
@@ -27,6 +28,7 @@ packages/
 *.tar
 *.bak
 *.wsuo
+*.sqlite
 
 # Arquivos de log e cache
 *.log
