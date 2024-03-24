@@ -43,10 +43,9 @@
                     return;
 
                 Console.WriteLine("Items in the Stack are :");
+
                 for (int i = TopIndex; i >= 0; i--)
-                {
                     Console.WriteLine(ArrayData[i]);
-                }
             }
 
             public T Peek() {
@@ -63,6 +62,7 @@
                     Console.WriteLine("Stack Overflow");
                     return;
                 }
+
                 TopIndex++;
                 ArrayData[TopIndex] = value;
             }
@@ -82,6 +82,7 @@
                     Console.WriteLine("Empty stack");
                     return true ;
                 }
+
                 return false;
             }
         }
