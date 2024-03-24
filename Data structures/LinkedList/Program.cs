@@ -13,36 +13,43 @@
             linkedList.AddNodeInTheBeginning(0);
 
             linkedList.Print();
+
+            linkedList.RemoveNodeFromTheBeginning();
+
+            linkedList.Print();
+
+            linkedList.RemoveNodeFromTheEnd();
+
+            linkedList.Print();
+
             Console.ReadLine();
         }
 
         public class LinkedList<T>
         {
-            public Node<T> Node { get; set; } = null!;
+            public Node<T> Head { get; set; } = null!;
 
             public void Print()
             {
-                var currentNode = Node;
-                while (true)
-                {
-                    Console.WriteLine(currentNode.Value);
-                    if (currentNode.Next == null)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        currentNode = currentNode.Next;
-                    }
+                var current = Head;
+                if (current == null) {
+                    Console.Write("The linked list is empty!");
                 }
+
+                while (current != null)
+                {
+                    Console.Write(current.Value + " ");
+                    current = current.Next;
+                }
+                Console.WriteLine();
             }
 
             public void AddNodeInTheEnd(T value)
             {
-                var currentNode = Node;
+                var currentNode = Head;
                 if (currentNode == null)
                 {
-                    Node = new Node<T>(value);
+                    Head = new Node<T>(value);
                     return;
                 }
 
@@ -60,8 +67,37 @@
 
             public void AddNodeInTheBeginning(T value)
             {
-                var newNode = new Node<T>(value, Node);
-                Node = newNode;
+                var newNode = new Node<T>(value, Head);
+                Head = newNode;
+            }
+
+            public void RemoveNodeFromTheBeginning()
+            {
+                if (Head != null)
+                    Head = Head.Next;
+            }
+
+            public void RemoveNodeFromTheEnd()
+            {
+                var currentNode = Head;
+                if (Head != null)
+                {
+                    if (Head.Next == null) {
+                        Head = null;
+                        return;
+                    }
+                        
+
+                    while (true)
+                    {
+                        if (currentNode.Next.Next == null)
+                        {
+                            currentNode.Next = null;
+                            break;
+                        }
+                        currentNode = currentNode.Next;
+                    }
+                }
             }
         }
 
