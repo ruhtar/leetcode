@@ -16,6 +16,11 @@
             queue.Dequeue();
             queue.Print();
 
+            var front = queue.Peek();
+            if (front != default) { 
+                Console.WriteLine($"The element in the front of the queue is: {front}");
+            }
+
             Console.ReadLine();
         }
 
@@ -76,9 +81,12 @@
                 Console.WriteLine();
             }
 
-            public void Peek()
+            public T? Peek()
             {
+                if (IsEmpty())
+                    return default;
 
+                return ArrayData[0];
             }
 
         }
