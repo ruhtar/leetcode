@@ -22,7 +22,20 @@
 
             linkedList.Print();
 
+            linkedList.FindValuePosition(5);
+
             Console.ReadLine();
+        }
+        public class Node<T>
+        {
+            public T Value { get; set; }
+            public Node<T>? Next { get; set; } //Nullable 'cause the Tail has no reference to other nodes.
+
+            public Node(T value, Node<T>? next = null)
+            {
+                Value = value;
+                Next = next;
+            }
         }
 
         public class LinkedList<T>
@@ -32,7 +45,8 @@
             public void Print()
             {
                 var current = Head;
-                if (current == null) {
+                if (current == null)
+                {
                     Console.Write("The linked list is empty!");
                 }
 
@@ -74,7 +88,15 @@
             public void RemoveNodeFromTheBeginning()
             {
                 if (Head != null)
+                {
+                    if (Head.Next == null)
+                    {
+                        Head = null;
+                        return;
+                    }
+
                     Head = Head.Next;
+                }
             }
 
             public void RemoveNodeFromTheEnd()
@@ -82,15 +104,16 @@
                 var currentNode = Head;
                 if (Head != null)
                 {
-                    if (Head.Next == null) {
+                    if (Head.Next == null)
+                    {
                         Head = null;
                         return;
                     }
-                        
+
 
                     while (true)
                     {
-                        if (currentNode.Next.Next == null)
+                        if (currentNode.Next!.Next == null)
                         {
                             currentNode.Next = null;
                             break;
@@ -99,17 +122,21 @@
                     }
                 }
             }
-        }
 
-        public class Node<T>
-        {
-            public T Value { get; set; }
-            public Node<T>? Next { get; set; } //Nullable 'cause the last Node has no reference to other nodes.
-
-            public Node(T value, Node<T>? next = null)
+            public void FindValuePosition(T value)
             {
-                Value = value;
-                Next = next;
+                var current = Head;
+                var counter = 0;
+                while (current != null)
+                {
+                    if (current.Value!.Equals(value))
+                    {
+                        Console.WriteLine($"Value {value} found on position: {counter}");
+                        return;
+                    }
+                    current = current.Next;
+                }
+                Console.WriteLine("Value not found on the linked list");
             }
         }
     }
