@@ -26,6 +26,7 @@ packages/
 *.gz
 *.tar
 *.bak
+*.wsuo
 
 # Arquivos de log e cache
 *.log
