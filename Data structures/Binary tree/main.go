@@ -12,7 +12,7 @@ func main() {
 	rootNode := &Node{
 		LeftChild:  nil,
 		RightChild: nil,
-		Data:       1,
+		Data:       2,
 	}
 
 	fmt.Println(rootNode.Data)
