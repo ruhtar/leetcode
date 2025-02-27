@@ -85,3 +85,4 @@ node_modules/
 *.log
 *.cache
 
+/Algorithms/BubbleSort/.vs/BubbleSort/v17
