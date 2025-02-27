@@ -86,3 +86,4 @@ node_modules/
 *.cache
 
 /Algorithms/BubbleSort/.vs/BubbleSort/v17
+DocumentLayout.json
