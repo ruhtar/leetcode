@@ -1,4 +1,7 @@
-﻿namespace BubbleSort;
+﻿using System.Security.Cryptography;
+using System.Xml.Linq;
+
+namespace BubbleSort;
 
 internal class Program
 {
@@ -13,6 +16,7 @@ internal class Program
         Console.ReadLine();
     }
 
+    //The name “bubble sort” refers to the way in which larger elements “bubble” to the top or the end of the array, 
     public static int[] BubbleSort(int[] list)
     {
         while (true) 
