@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var list = new int[] { 6, 12, 62, 13, 789, 234, 1212, 2, 40, 10, 1000, 200, 333, -4, 0 };
+        var list = new int[] { 6, 12, 0, 62, 13, 789, 234, 1212, 2, 40, 2, 10, 1000, 200, 333, -4, 0 };
 
         var sortedList = Program.QuickSort(list, 0, list.Length - 1);
 
