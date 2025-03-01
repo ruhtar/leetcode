@@ -18,6 +18,9 @@ internal class Program
 
     public static int[] QuickSort(int[] list, int left, int rigth) 
     {
+        if (left >= rigth)
+            return list;    
+
         var pivot = list[rigth];
 
         for (int i = left; i < rigth; i++)
@@ -31,8 +34,6 @@ internal class Program
                 left++;
             }
         }
-
-        if (left == rigth) return list;
 
         list[rigth] = list[left];
         list[left] = pivot;
