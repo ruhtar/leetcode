@@ -2,8 +2,6 @@
 
 ## Definição
 
-# Binary Tree (Árvore Binária)
-
 ```mermaid  
 graph TD  
     A((Raiz)) --> B((Filho Esquerdo))  
