@@ -1,6 +1,20 @@
 # Árvore Binária (Binary Tree)
 
 ## Definição
+
+# Binary Tree (Árvore Binária)
+
+```mermaid  
+graph TD  
+    A((Raiz)) --> B((Filho Esquerdo))  
+    A --> C((Filho Direito))  
+    B --> D((Subárvore Esquerda))  
+    B --> E((Subárvore Direita))  
+    C --> F((Subárvore Esquerda))  
+    C --> G((Subárvore Direita))
+```
+
+
 Estrutura de dados hierárquica onde cada nó possui:
 - No máximo dois filhos: 
   - Filho esquerdo (left child)

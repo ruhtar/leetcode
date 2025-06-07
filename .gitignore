@@ -1,7 +1,7 @@
 # Arquivos de compilação do Visual Studio
 bin/
 obj/
-
+.vs
 # Arquivos temporários gerados durante a compilação
 *.user
 *.vspscc
